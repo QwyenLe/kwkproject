@@ -146,10 +146,10 @@
             </objects>
             <point key="canvasLocation" x="832" y="794"/>
         </scene>
-        <!--View Controller-->
+        <!--Self Care View Controller-->
         <scene sceneID="7pQ-HT-tFE">
             <objects>
-                <viewController id="Ltd-iW-MB7" sceneMemberID="viewController">
+                <viewController id="Ltd-iW-MB7" customClass="SelfCareViewController" customModule="kwkproject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UsT-Ts-NpS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,7 +162,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="G0f-1f-jXE"/>
+                                    <action selector="homeButton:" destination="Ltd-iW-MB7" eventType="touchUpInside" id="qMG-rp-4SX"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="2ah-Ju-eS5"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aG9-sB-DDO">
@@ -180,7 +181,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BbY-cv-fz6" kind="show" id="rZz-ri-XPd"/>
+                                    <action selector="nextButton:" destination="Ltd-iW-MB7" eventType="touchUpInside" id="glo-Cv-V7w"/>
+                                    <segue destination="BbY-cv-fz6" kind="show" id="esN-Gw-ONV"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ods-Pm-ttr">
@@ -198,20 +200,16 @@
                                 <rect key="frame" x="321" y="77" width="27" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dg0-Fc-owJ">
-                                <rect key="frame" x="36" y="227" width="162" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rZY-Sf-PeK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="outside" translatesAutoresizingMaskIntoConstraints="NO" id="rZY-Sf-PeK">
                                 <rect key="frame" x="219" y="227" width="162" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FjR-8H-Awo">
-                                <rect key="frame" x="36" y="445" width="162" height="95"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selflove" translatesAutoresizingMaskIntoConstraints="NO" id="FjR-8H-Awo">
+                                <rect key="frame" x="36" y="484" width="162" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="41p-xw-tgM">
-                                <rect key="frame" x="219" y="445" width="162" height="95"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="screentime" translatesAutoresizingMaskIntoConstraints="NO" id="41p-xw-tgM">
+                                <rect key="frame" x="218" y="484" width="163" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Self Care" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PW7-a5-dEE">
@@ -221,35 +219,89 @@
                                 <color key="textColor" red="0.92769242439999999" green="0.6468086233" blue="0.40946693200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="[Text]" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gzE-Nr-nUG">
-                                <rect key="frame" x="69" y="330" width="97" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Drink Water" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gzE-Nr-nUG">
+                                <rect key="frame" x="60" y="185" width="118" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.22381408390437801" green="0.39066527061855671" blue="0.30650773574900919" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="[Text]" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y2j-bM-Yzz">
-                                <rect key="frame" x="252" y="330" width="97" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Go Outside" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y2j-bM-Yzz">
+                                <rect key="frame" x="240" y="185" width="118" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.22381408389999999" green="0.3906652706" blue="0.30650773570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="[Text]" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6si-Or-nbr">
-                                <rect key="frame" x="69" y="548" width="97" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Treat Yourself" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6si-Or-nbr">
+                                <rect key="frame" x="58" y="442" width="118" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.22381408389999999" green="0.3906652706" blue="0.30650773570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="[Text]" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lJR-as-wMm">
-                                <rect key="frame" x="251" y="548" width="97" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Reduce Screen Time" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lJR-as-wMm">
+                                <rect key="frame" x="210" y="442" width="178" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.22381408389999999" green="0.3906652706" blue="0.30650773570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="It's important to drink 8 glasses of water each day in order to stay hydrated and healthy." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="das-Ps-Tjd">
+                                <rect key="frame" x="36" y="330" width="162" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IbR-4E-vqy">
+                                <rect key="frame" x="216" y="601" width="169" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">This year has been one of virtual settings and  it can feel overwhelming and tiring. Take some time away from technology for a moment.</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wco-Ka-wx1">
+                                <rect key="frame" x="33" y="587" width="169" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Some days you need to give yourself a little extra love. Go pamper yourself, do some skincare, take a bath, enjoy a nice book. Do anything that make you happy.</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Take a walk or just sit and bask in nature." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SnZ-e2-Jmj">
+                                <rect key="frame" x="219" y="344" width="162" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="waterbottle" translatesAutoresizingMaskIntoConstraints="NO" id="Dg0-Fc-owJ">
+                                <rect key="frame" x="33" y="227" width="162" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xK7-xV-4dK"/>
                         <color key="backgroundColor" red="0.96848052740097046" green="0.92722414479103032" blue="0.73631866602488527" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="SyC-DG-rXE"/>
+                    <connections>
+                        <outlet property="drinkWaterDescription" destination="das-Ps-Tjd" id="b4R-Dm-eQN"/>
+                        <outlet property="drinkWaterText" destination="gzE-Nr-nUG" id="54C-Sx-P2d"/>
+                        <outlet property="goOutsideDescription" destination="SnZ-e2-Jmj" id="prh-YJ-VB5"/>
+                        <outlet property="goOutsideText" destination="y2j-bM-Yzz" id="7Vn-Be-raA"/>
+                        <outlet property="screenTimeDescription" destination="IbR-4E-vqy" id="Rpe-XM-ii9"/>
+                        <outlet property="screenTimeText" destination="lJR-as-wMm" id="iyM-uf-MY5"/>
+                        <outlet property="selfCareLabel" destination="PW7-a5-dEE" id="hbR-EV-mNy"/>
+                        <outlet property="treatYourselfDescription" destination="Wco-Ka-wx1" id="5Yq-8d-QwR"/>
+                        <outlet property="treatYourselfText" destination="6si-Or-nbr" id="FST-lw-iba"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3FP-cH-4QU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -259,13 +311,17 @@
     <inferredMetricsTieBreakers>
         <segue reference="Z8J-xs-4MM"/>
         <segue reference="shj-tD-q1i"/>
-        <segue reference="rZz-ri-XPd"/>
-        <segue reference="G0f-1f-jXE"/>
+        <segue reference="esN-Gw-ONV"/>
+        <segue reference="2ah-Ju-eS5"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="outside" width="268" height="188"/>
         <image name="pastel_circle-removebg-preview" width="225" height="225"/>
+        <image name="screentime" width="225" height="225"/>
+        <image name="selflove" width="225" height="225"/>
+        <image name="waterbottle" width="225" height="225"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

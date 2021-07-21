@@ -16,6 +16,7 @@
 		B5A228C126A73FE800309B02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A228BF26A73FE800309B02 /* LaunchScreen.storyboard */; };
 		B5A228CC26A73FE900309B02 /* kwkprojectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A228CB26A73FE900309B02 /* kwkprojectTests.swift */; };
 		B5A228D726A73FE900309B02 /* kwkprojectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A228D626A73FE900309B02 /* kwkprojectUITests.swift */; };
+		FD03AD9A26A882B6006C07B8 /* SelfCareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD03AD9926A882B6006C07B8 /* SelfCareViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B5A228D226A73FE900309B02 /* kwkprojectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kwkprojectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A228D626A73FE900309B02 /* kwkprojectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kwkprojectUITests.swift; sourceTree = "<group>"; };
 		B5A228D826A73FE900309B02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD03AD9926A882B6006C07B8 /* SelfCareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfCareViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				B5A228B326A73FDB00309B02 /* SceneDelegate.swift */,
 				B5A228B526A73FDB00309B02 /* ViewController.swift */,
 				B5A228B726A73FDB00309B02 /* Main.storyboard */,
+				FD03AD9926A882B6006C07B8 /* SelfCareViewController.swift */,
 				B5A228BD26A73FE800309B02 /* Assets.xcassets */,
 				B5A228BF26A73FE800309B02 /* LaunchScreen.storyboard */,
 				B5A228C226A73FE800309B02 /* Info.plist */,
@@ -263,6 +266,7 @@
 			files = (
 				B5A228B626A73FDB00309B02 /* ViewController.swift in Sources */,
 				B5A228B226A73FDB00309B02 /* AppDelegate.swift in Sources */,
+				FD03AD9A26A882B6006C07B8 /* SelfCareViewController.swift in Sources */,
 				B5A228B426A73FDB00309B02 /* SceneDelegate.swift in Sources */,
 				B5A228BC26A73FDB00309B02 /* kwkproject.xcdatamodeld in Sources */,
 			);
